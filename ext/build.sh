@@ -27,7 +27,7 @@ fn_build()
 }
 
 rm -rf date sqlpp11
-rm -rf src/date-2.4.1/build/ src/sqlpp11-0.57/build/ src/sqlpp11-connector-postgresql_custom/build/
+rm -rf src/date-2.4.1/build/ src/sqlpp11-0.57/build/ src/sqlpp11-connector-postgresql_5e834b3/build/
 
 PWD=`pwd`
 
@@ -35,4 +35,4 @@ fn_build "$PWD" "HinnantDate" "src/date-2.4.1" "-DCMAKE_BUILD_TYPE=Release -DCMA
 
 fn_build "$PWD" "sqlpp11" "src/sqlpp11-0.57" "-DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=11 -DCMAKE_INSTALL_MESSAGE=NEVER -DHinnantDate_ROOT_DIR=../../../date -DENABLE_TESTS=OFF -DCMAKE_INSTALL_PREFIX=../../../sqlpp11 .."
 
-fn_build "$PWD" "sqlpp11-connector-postgresql" "src/sqlpp11-connector-postgresql_custom" "-DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=11 -DCMAKE_INSTALL_MESSAGE=NEVER -DHinnantDate_ROOT_DIR=../../../date -DPostgreSQL_TYPE_INCLUDE_DIR=/usr/include/postgresql -DENABLE_TESTS=OFF -DCMAKE_INSTALL_PREFIX=../../../sqlpp11 .."
+fn_build "$PWD" "sqlpp11-connector-postgresql" "src/sqlpp11-connector-postgresql_5e834b3" "-DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=11 -DCMAKE_INSTALL_MESSAGE=NEVER -DHinnantDate_ROOT_DIR=../../../date -DPostgreSQL_TYPE_INCLUDE_DIR=/usr/include/postgresql -DENABLE_TESTS=OFF -DCMAKE_INSTALL_PREFIX=../../../sqlpp11 .."

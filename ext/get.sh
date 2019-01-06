@@ -27,7 +27,7 @@ mkdir -p src
 fn_get "$PWD" https://codeload.github.com/campisano/GenericMakefile/zip/master
 fn_get "$PWD" https://codeload.github.com/rbock/sqlpp11/zip/0.57
 fn_get "$PWD" https://codeload.github.com/HowardHinnant/date/zip/v2.4.1
-fn_get "$PWD" https://codeload.github.com/campisano/sqlpp11-connector-postgresql/zip/a13945c2b96bf7c896fe744eddab6b9803019c34
+fn_get "$PWD" https://codeload.github.com/matthijs/sqlpp11-connector-postgresql/zip/5e834b311484a2f59a94e555723fb579fd0d95d9
 
 cp -a src/GenericMakefile-master/Makefile.inc .
-mv src/sqlpp11-connector-postgresql-a13945c2b96bf7c896fe744eddab6b9803019c34 src/sqlpp11-connector-postgresql_custom
+mv src/sqlpp11-connector-postgresql-5e834b311484a2f59a94e555723fb579fd0d95d9 src/sqlpp11-connector-postgresql_5e834b3
