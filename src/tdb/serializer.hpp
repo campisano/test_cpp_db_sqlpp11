@@ -14,7 +14,7 @@ struct serializer
     std::ostringstream _os;
 
     serializer() = default;
-    serializer(const serializer& rhs)
+    serializer(const serializer & rhs)
     {
         _os << rhs._os.str();
     }
@@ -30,7 +30,7 @@ struct serializer
     }
 
     template <typename T>
-    std::ostream& operator<<(T t)
+    std::ostream & operator<<(T t)
     {
         return _os << t;
     }

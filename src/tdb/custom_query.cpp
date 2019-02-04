@@ -16,12 +16,12 @@ void testCustomPlainQuery(sqlpp::postgresql::connection & _db)
         "SELECT typname, typlen, typinput, typoutput FROM pg_type LIMIT 5;";
 
     auto statement = custom_query(sqlpp::verbatim(sql))
-        .with_result_type_of(select(
-                                 sqlpp::value("").as(sqlpp::alias::a),
-                                 sqlpp::value(0).as(sqlpp::alias::b),
-                                 sqlpp::value("").as(sqlpp::alias::c),
-                                 sqlpp::value("").as(sqlpp::alias::d)
-                                 ));
+                     .with_result_type_of(select(
+                             sqlpp::value("").as(sqlpp::alias::a),
+                             sqlpp::value(0).as(sqlpp::alias::b),
+                             sqlpp::value("").as(sqlpp::alias::c),
+                             sqlpp::value("").as(sqlpp::alias::d)
+                                          ));
 
     serializer printer = {};
     const auto result = serialize(statement, printer).str();
